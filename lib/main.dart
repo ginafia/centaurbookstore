@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:centaurbookstore/menu.dart';
+import 'package:centaurbookstore/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
