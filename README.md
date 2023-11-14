@@ -22,8 +22,13 @@
     3. Data Layer: berisi kumpulan repositori dan sumber data.
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
-    - 
-    - 
+    - Menambahkan drawer menu untuk navigasi dengan cara membuat file baru bernama left_drawer.dart dalam direktori baru bernama widgets > mengimpor halaman yang kita ingin masukkan navigasinya ke dalam Drawer Menu > masukkan routing > hias drawer > memasukkan drawer ke halaman yang ingin ditambahkan drawer. 
+    - Menambahkan Form dan elemen input dengan cara membuat direktori baru bernama screens lalu membuat file baru bernama shoplist_form.dart > import drawer yang sudah dibuat sebelumnya > buat 2 class yakni ShopFormPage dan _ShopFormPageState
+    - Memunculkan data dengan menambah dan memanfaatkan fungsi showDialog()
+    - Menambahkan kemampuan navigasi pada tombol yang sudah sebelumnya dibuat membuat file baru bernama shop_cart.dart dan memindahkan widget ShopItem dari menu.dart ke shop_cart.dart.
+    - Membuat direkrori baru bernama models dan membuat file baru bernama models.dart sebagai tempat untuk menyimpan class baru, yaitu class item
+    - Membuat file item_list.dart sebagai halaman yang akan menampilkan item yang telah ditambahkan
+    - Memindahkan berkas menu.dart ke direktori widgets
 
 
 
