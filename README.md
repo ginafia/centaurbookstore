@@ -31,26 +31,21 @@ karena mereka memerlukan informasi autentikasi untuk melakukan operasi yang meme
 - SnackBar: menampilkan pesan singkat di bagian bawah layar
 
 6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
-- Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
-    1. Lakukan penyesuaian dengan mambuat app baru authentication dan fungsi lainnya 
-    2. git add commit push 
-    3. deploy proyek django
-
 - Membuat halaman login pada proyek tugas Flutter.
-    1. Buat halaman login.dart di folder screens
-    2. isi file login dengan kode class LoginApp
-    3. Pada file main.dart, pada Widget MaterialApp(...), ubah home: MyHomePage() menjadi home: LoginPage()
+    1. Buat file baru bernama login.dart di folder screens.
+    2. Isi file login dengan kode kelas LoginApp.
+    3. Pada file main.dart, pada Widget MaterialApp(...), ubah home: MyHomePage() menjadi home: LoginPage().
 
 - Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
-    1. buat django app baru bernama authentication dan tambahkan ke settings.py
-    2. buat fungsi login dan logout di authentication/views.py
-    3. tambahkan corheaders
-    4. deploy proyek
-    5. Di flutter install package pbp_django_auth
-    6. memodifikasi root widget untuk menyediakan CookieRequest library ke semua child widgets dengan menggunakan Provider
+    1. Buat aplikasi Django baru bernama authentication dan tambahkan ke settings.py.
+    2. Buat fungsi login dan logout di authentication/views.py.
+    3. Tambahkan corheaders.
+    4. Deploy proyek.
+    5. Di Flutter, install package pbp_django_auth.
+    6. Modifikasi root widget untuk menyediakan CookieRequest library ke semua child widgets dengan menggunakan Provider.
 
 - Membuat model kustom sesuai dengan proyek aplikasi Django.
-    1. Buka endpoint JSON django 
+    1. Buka endpoint JSON django.
     2. Salinlah data JSON dan buka situs web Quicktype.
     3. Pada situs web Quicktype, ubahlah setup name menjadi Product, source type menjadi JSON, dan language menjadi Dart.
     4. Tempel data JSON yang telah disalin sebelumnya ke dalam textbox yang tersedia pada Quicktype.
@@ -58,24 +53,24 @@ karena mereka memerlukan informasi autentikasi untuk melakukan operasi yang meme
 
 - Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah kamu deploy.
     1. Lakukan flutter pub add http pada terminal proyek Flutter untuk menambahkan package http.
-    2. Tambahkan kode berikut untuk memperbolehkan akses Internet pada aplikasi Flutter
+    2. Tambahkan kode berikut untuk memperbolehkan akses Internet pada aplikasi Flutter.
     3. Buatlah file baru pada folder lib/screens dengan nama list_product.dart.
-    4. Buat kelas ProductPage dan import library yang dibutuhkan
-    5. Tambahkan  halaman list_product.dart ke widgets/left_drawer.dart
-    6. Ubah fungsi tombol Lihat Produk pada halaman utama agar mengarahkan ke halaman ProductPage
+    4. Buat kelas ProductPage dan import library yang dibutuhkan.
+    5. Tambahkan halaman list_product.dart ke widgets/left_drawer.dart.
+    6. Ubah fungsi tombol Lihat Produk pada halaman utama agar mengarahkan ke halaman ProductPage.
     7. Impor file yang dibutuhkan saat menambahkan ProductPage ke left_drawer.dart dan shop_card.dart.
 
-- Integrasi Form Flutter Dengan Layanan Django
-    1. buat fungsi baru di main view.py Django create_product_flutter
-    2. tambah path baru
-    3. Deploy ulang aplikasi 
-    4. di Flutter Hubungkan halaman shoplist_form.dart dengan CookieRequest (final request = context.watch<CookieRequest>();)
+- Integrasi Form Flutter Dengan Layanan Django.
+    1. Buat fungsi baru di main view.py Django create_product_flutter.
+    2. Tambahkan path baru.
+    3. Deploy ulang aplikasi.
+    4. Di Flutter, hubungkan halaman shoplist_form.dart dengan CookieRequest (final request = context.watch<CookieRequest>();).
 
-- Implementasi Fitur logout
-    1. buat views.py untuk logout di django
-    2. tambahkan path 
-    3. di flutter, di shop_card.dart tambahkan final request = context.watch<CookieRequest>();
-    4. ubah widget Inkwell ke async
+- Implementasi Fitur logout.
+1. Buat views.py untuk logout di django.
+2. Tambahkan path.
+3. Di flutter, di shop_card.dart tambahkan final request = context.watch<CookieRequest>();.
+4. Ubah widget Inkwell ke async.
 
 --------------------------------------------------------------------------------------------------------------------
 <h3>Tugas 8</h3>
