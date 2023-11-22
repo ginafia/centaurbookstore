@@ -17,8 +17,8 @@ class ShopFormPage extends StatefulWidget {
 
 class _ShopFormPageState extends State<ShopFormPage> {
     final _formKey = GlobalKey<FormState>();
-    String _name = "";
-    int _price = 0;
+    String _title = "";
+    int _amount = 0;
     String _description = "";
 
     @override
@@ -46,15 +46,15 @@ class _ShopFormPageState extends State<ShopFormPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                             decoration: InputDecoration(
-                            hintText: "Nama Produk",
-                            labelText: "Nama Produk",
+                            hintText: "Judul Buku",
+                            labelText: "Judul Buku",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                             ),
                             ),
                             onChanged: (String? value) {
                             setState(() {
-                                _name = value!;
+                                _title = value!;
                             });
                             },
                             validator: (String? value) {
@@ -70,8 +70,8 @@ class _ShopFormPageState extends State<ShopFormPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                             decoration: InputDecoration(
-                            hintText: "Harga",
-                            labelText: "Harga",
+                            hintText: "Jumlah",
+                            labelText: "Jumlah",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                             ),
@@ -79,7 +79,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
                             // TODO: Tambahkan variabel yang sesuai
                             onChanged: (String? value) {
                             setState(() {
-                                _price = int.parse(value!);
+                                _amount = int.parse(value!);
                             });
                             },
                             validator: (String? value) {
@@ -135,8 +135,8 @@ class _ShopFormPageState extends State<ShopFormPage> {
                                 final response = await request.postJson(
                                 "http://localhost:8000/create-flutter/",
                                 jsonEncode(<String, String>{
-                                    'name': _name,
-                                    'price': _price.toString(),
+                                    'name': _title,
+                                    'price': _amount.toString(),
                                     'description': _description,
                                     // TODO: Sesuaikan field data sesuai dengan aplikasimu
                                 }));

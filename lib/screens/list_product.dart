@@ -70,17 +70,18 @@ Widget build(BuildContext context) {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                     Text(
-                                    "${snapshot.data![index].fields.name}",
+                                    "${snapshot.data![index].fields.title}",
                                     style: const TextStyle(
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                     ),
                                     ),
                                     const SizedBox(height: 10),
-                                    Text("${snapshot.data![index].fields.price}"),
+                                    Text("${snapshot.data![index].fields.amount}"),
                                     const SizedBox(height: 10),
                                     Text(
-                                        "${snapshot.data![index].fields.description}")
+                                        "${snapshot.data![index].fields.description}"),
+                                    
                                 ],
                                 ),
                             ));

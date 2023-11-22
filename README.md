@@ -1,15 +1,37 @@
 <h3>Tugas 9</h3>
 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+- Ya, hal ini dapat dilakukan dengan menggunakan dart:convert untuk mengubah JSON menjadi Map<String, dynamic> dan kemudian mengakses data yang diperlukan secara langsung dari map tersebut.
+- Lebih disarankan menggunakan model karena memberi tingkat keamanan tipe dan memungkinkan kita untuk menggunakan fitur Dart.
 
 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+- CookieRequest adalah bagian dari mekanisme autentikasi yang digunakan dalam banyak aplikasi web. CookieRequest berisi informasi tentang pengguna yang sedang login, seperti ID pengguna, nama pengguna, dan hak akses. CookieRequest biasanya disimpan di browser pengguna dan dikirim kembali ke server setiap kali pengguna melakukan permintaan ke server.
+- Alasan CookieRequest perlu dibagikan ke semua komponen di aplikasi Flutter:
+karena mereka memerlukan informasi autentikasi untuk melakukan operasi yang memerlukan otorisasi, seperti mengakses data pribadi pengguna atau melakukan perubahan pada data pengguna. Dengan memiliki akses ke CookieRequest, komponen dapat memverifikasi apakah pengguna yang sedang login memiliki hak akses yang diperlukan untuk melakukan operasi tersebut.
 
 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+- Menggunakan package seperti http untuk melakukan request ke server dan mengambil data JSON.
+- Data JSON dikonversi jadi model Dart.
+- Kemudian, data dapat ditambilkan di UI Flutter.
+
 
 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+- Menggunakan package http untuk melakukan request POST ke endpoint autentikasi Django dengan data akun pengguna.
+- Django akan memverifikasi data tsb.
+- Jika valid, Django akan mengembalikan token autentikasi.
 
 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+- Scaffold: kerangka dasar aplikasi Flutter
+- AppBar: menampilkan bar aplikasi di bagian atas layar
+- Container: menyediakan konteks layout dan rendering untuk widget anaknya. Biasanya digunakan untuk mengatur padding, margin, dan warna background
+- Column: mengatur tata letak widget secara vertikal
+- TextField: menerima input dari pengguna
+- SizedBox: memberi jarak antar widget. Biasanya digunakan untuk mengatur margin atau padding
+- ElevatedButton: melakukan aksi ketika ditekan
+- Navigator: mengelola navigasi antar halaman dalam aplikasi Flutter
+- SnackBar: menampilkan pesan singkat di bagian bawah layar
 
 6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+- 
 
 --------------------------------------------------------------------------------------------------------------------
 <h3>Tugas 8</h3>
